@@ -8,15 +8,15 @@ UI是纯Java做的；计算利用Python可以直接运行字符串特点进行�
 ```bash
 ├───src
 │   ├───hy
-│   |   ├───java
-│   |   |   ├───GradientButtonTextUI
-│   |   |   ├───MyPane
-│   |   |   ├───PrimaryCalculator
-│   |   |   └───RoundedBorder
-|   |   ├───Resources
-│   |   |   ├───Image
-│   |   |   |   ├───March 7 verticval screen version
-│   |   |   └───Python37
+│   │   ├───java
+│   │   │   ├───GradientButtonTextUI
+│   │   │   ├───MyPane
+│   │   │   ├───PrimaryCalculator
+│   │   │   └───RoundedBorder
+│   │   ├───Resources
+│   │   │   ├───Image
+│   │   │   │   ├───March 7 verticval screen version
+│   │   │   └───Python37
 ```
 
 #环境配置
