@@ -14,25 +14,6 @@ public class PrimaryCalculator {
     private static final int MARGIN_Y = 60;
     private final JFrame jf;
     private final JTextField inText;
-    private final JButton buttonClear;
-    private final JButton buttonBackspace;
-    private final JButton buttonModule;
-    private final JButton buttonDivision;
-    private final JButton buttonMultiplication;
-    private final JButton buttonSubtraction;
-    private final JButton buttonAddition;
-    private final JButton button0;
-    private final JButton button1;
-    private final JButton button2;
-    private final JButton button3;
-    private final JButton button4;
-    private final JButton button5;
-    private final JButton button6;
-    private final JButton button7;
-    private final JButton button8;
-    private final JButton button9;
-    private final JButton buttonPoint;
-    private final JButton buttonEqual;
     int[] x = {MARGIN_X, MARGIN_X + 90, 200, 290, 380};
     int[] y = {MARGIN_Y, MARGIN_Y + 100, MARGIN_Y + 180, MARGIN_Y + 260, MARGIN_Y + 340, MARGIN_Y + 420};
 
@@ -52,12 +33,12 @@ public class PrimaryCalculator {
         inText.setFont(new Font("宋体", Font.BOLD, 43));
         jf.add(inText);
 
-        buttonClear = customButton("C", x[0], y[1], event -> {
+        JButton buttonClear = customButton("C", x[0], y[1], event -> {
             resetFont();
             inText.setText("0");
         });
 
-        buttonBackspace = customButton("<-", x[1], y[1], event -> {
+        JButton buttonBackspace = customButton("<-", x[1], y[1], event -> {
             resetFont();
             String str = inText.getText();
             StringBuilder str2 = new StringBuilder();
@@ -71,32 +52,32 @@ public class PrimaryCalculator {
             }
         });
 
-        buttonModule = customButton("%", x[2], y[1], event -> {
+        JButton buttonModule = customButton("%", x[2], y[1], event -> {
             resetFont();
             inText.setText(inText.getText() + "%");
         });
 
-        buttonDivision = customButton("/", x[3], y[1], event -> {
+        JButton buttonDivision = customButton("/", x[3], y[1], event -> {
             resetFont();
             inText.setText(inText.getText() + "/");
         });
 
-        buttonMultiplication = customButton("*", x[3], y[2], event -> {
+        JButton buttonMultiplication = customButton("*", x[3], y[2], event -> {
             resetFont();
             inText.setText(inText.getText() + "*");
         });
 
-        buttonSubtraction = customButton("-", x[3], y[3], event -> {
+        JButton buttonSubtraction = customButton("-", x[3], y[3], event -> {
             resetFont();
             inText.setText(inText.getText() + "-");
         });
 
-        buttonAddition = customButton("+", x[3], y[4], event -> {
+        JButton buttonAddition = customButton("+", x[3], y[4], event -> {
             resetFont();
             inText.setText(inText.getText() + "+");
         });
 
-        button1 = customButton("1", x[0], y[4], event -> {
+        JButton button1 = customButton("1", x[0], y[4], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("1");
@@ -105,7 +86,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button2 = customButton("2", x[1], y[4], event -> {
+        JButton button2 = customButton("2", x[1], y[4], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("2");
@@ -114,7 +95,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button3 = customButton("3", x[2], y[4], event -> {
+        JButton button3 = customButton("3", x[2], y[4], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("3");
@@ -123,7 +104,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button4 = customButton("4", x[0], y[3], event -> {
+        JButton button4 = customButton("4", x[0], y[3], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("4");
@@ -132,7 +113,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button5 = customButton("5", x[1], y[3], event -> {
+        JButton button5 = customButton("5", x[1], y[3], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("5");
@@ -141,7 +122,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button6 = customButton("6", x[2], y[3], event -> {
+        JButton button6 = customButton("6", x[2], y[3], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("6");
@@ -150,7 +131,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button7 = customButton("7", x[0], y[2], event -> {
+        JButton button7 = customButton("7", x[0], y[2], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("7");
@@ -159,7 +140,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button8 = customButton("8", x[1], y[2], event -> {
+        JButton button8 = customButton("8", x[1], y[2], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("8");
@@ -168,7 +149,7 @@ public class PrimaryCalculator {
             }
         });
 
-        button9 = customButton("9", x[2], y[2], event -> {
+        JButton button9 = customButton("9", x[2], y[2], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("9");
@@ -177,12 +158,12 @@ public class PrimaryCalculator {
             }
         });
 
-        buttonPoint = customButton(".", x[0], y[5], event -> {
+        JButton buttonPoint = customButton(".", x[0], y[5], event -> {
             resetFont();
             inText.setText(inText.getText() + ".");
         });
 
-        button0 = customButton("0", x[1], y[5], event -> {
+        JButton button0 = customButton("0", x[1], y[5], event -> {
             resetFont();
             if (Pattern.matches("0*", inText.getText())) {
                 inText.setText("0");
@@ -191,7 +172,7 @@ public class PrimaryCalculator {
             }
         });
 
-        buttonEqual = customButton("=", x[2], y[5], event -> {
+        JButton buttonEqual = customButton("=", x[2], y[5], event -> {
 
             String relativePath = "\\src\\hy\\resources\\Python37\\python.exe";
             String currentPath = System.getProperty("user.dir") + relativePath;
