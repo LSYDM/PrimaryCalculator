@@ -10,6 +10,7 @@ UI是纯Java做的；计算利用Python可以直接运行字符串特点进行�
 GradientButtonTextUI类用来设置JButton字体，设置JButton字体颜色循环渐变，单色变换显得突兀，于是使用颜色插值法来填充两种颜色的中间色；
 MyPane类用来设置JFrame窗口的ContentPane，setBackground并不能设置ContentPane，只有setContentPane才可以，此类中将ContentPane设置为三月七；
 PrimaryCalculator类是计算器的主体，调用其他类绘制计算器UI并调用Python进行计算；
+RoundButton类用来设置按键触发范围；
 RoundedBorder类用来绘制JButton圆角边框
 ```
 
@@ -22,6 +23,7 @@ RoundedBorder类用来绘制JButton圆角边框
 │   │   │   ├───GradientButtonTextUI
 │   │   │   ├───MyPane
 │   │   │   ├───PrimaryCalculator
+│   │   │   ├───RoundButton
 │   │   │   └───RoundedBorder
 │   │   ├───Resources
 │   │   │   ├───Image
