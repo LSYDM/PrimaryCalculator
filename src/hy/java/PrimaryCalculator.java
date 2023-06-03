@@ -221,6 +221,7 @@ public class PrimaryCalculator {
                 buttonModule, buttonDivision, buttonMultiplication, buttonSubtraction, buttonAddition, buttonEqual};
         for (int i = 0; i <= 18; i++) {
             buttonList[i].setBorder(new RoundedBorder(20));
+
             buttonList[i].setUI(new GradientButtonTextUI(buttonList[i]));
             buttonList[i].setContentAreaFilled(false);
         }
@@ -233,7 +234,7 @@ public class PrimaryCalculator {
     }
 
     private JButton initButton(String label, int x, int y, ActionListener event) {
-        JButton button = new JButton(label);
+        RoundButton button = new RoundButton(label, 10);
         button.setBounds(x, y, BUTTON_WIDTH, BUTTON_HEIGHT);
         button.setFont(new Font("宋体", Font.PLAIN, 28));
         button.setCursor(new Cursor(Cursor.HAND_CURSOR));
